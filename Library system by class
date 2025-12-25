@@ -1,0 +1,78 @@
+    #include<iostream>
+#include<string>
+using namespace std;
+
+class library{
+    private:
+    int animation=100;
+    int cartoon=80;
+    int picture=120;
+    int story=90;
+    string selected;
+    string deal;
+ 
+    public:    
+    ~library(){       // greeting message:
+        cout<<" thanks for visiting our store ";
+    }
+    library(string selected){
+        this->selected=selected;
+     
+         if(selected=="animation"){
+        cout<<" Prize of "<< selected<<" book is :"<<animation<<endl;  }
+        else if(selected=="cartoon"){
+            cout<<" Prize of "<< selected<<" book is :"<<cartoon<<endl;
+        }
+        else if(selected=="picture"){
+            cout<<" Prize of "<< selected<<" book is :"<<picture<<endl;
+        }
+        else if(selected=="story"){
+            cout<<" Prize of "<< selected<<" book is :"<<story<<endl;
+        }
+        
+            cout<<" So would you like to buy this book :";
+        getline(cin,deal);
+        if(deal=="yes"){
+             cout<<" thanks for purchase this books :"<<endl;
+        }
+         else{
+            cout<<" invalid name  please type the correct book name :"<<endl; 
+            }
+        
+        }
+        
+        
+};
+int hello(){
+    
+      int books=50000;
+    string approval;
+    string check="yes";
+    string selected;
+
+    cout<<" Hlw welcome to our library"<<endl;
+    cout<<" we have approx 50k books "<<endl;
+    cout<<" if you want to any book just type yes :";
+    
+    getline(cin,approval);
+    if(approval==check){
+      cout<<" So which type of books you want to buy :"<<endl;
+      cout<<" we have these types of books :"<<endl<<" Animation books"<<endl<<" Cartoon books"<<endl<<" Picture book"<<endl<<" Story book"<<endl;
+      cout<<" Type a book name which you want to buy :";
+      getline(cin,selected);
+      
+      library customer1(selected); 
+    }
+    else{
+        cout<<"thanks for visiting our store +_+:";
+    }
+    return 0;
+}
+   
+int main(){
+    
+     hello();
+
+
+return 0;
+}
